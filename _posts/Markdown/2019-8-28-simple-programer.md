@@ -1,5 +1,5 @@
 ---
-title: markdown学习笔记(基本语法)
+title: Markdown --- 基本语法
 layout: post
 tags: [Markdown]
 ---

@@ -1,5 +1,5 @@
 ---
-title: 文件操作--系统调用
+title: Linux文件操作 --- 系统调用
 layout: post
 tags: [Linux System Program]
 ---
