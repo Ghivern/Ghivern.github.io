@@ -16,38 +16,40 @@ tags: [Python]
 
 当模块被导入时，模块代码会被执行且仅仅一次。
 
-	模块内置属性：
+模块内置属性：
 
-		* __name__ :模块直接执行时，其值为__main__;被其他py文件import时，模块被执行一次，__main__值为模块名。可用这个属性和分离出模块的测试代码
-		```
-		if __name__ == '__main__':
-			测试代码
-		```
+* __name__ :模块直接执行时，其值为__main__;被其他py文件import时，模块被执行一次，__main_—值为模块名。可用这个属性和分离出模块的测试代码
 
-		* __all__:用于限定使用from module import * 语句引入的代码
-		```
-		# module.py
-		__all__ = ['f1']
+```
+if __name__ == '__main__':
+	测试代码
+```
 
-		def f1():
-		 	return 0
+* __all__:用于限定使用from module import * 语句引入的代码
 
-		def f2():
-			return 1
-		```
+```
+# module.py
+__all__ = ['f1']
 
-		这样在test.py文件中
-		```
-		from module import *
-		f1() #正确执行
-		f2() #不能执行
-		```
+def f1():
+	return 0
 
-	模块补充函数：
+def f2():
+	return 1
+```
 
-		* dir() :返回编译完成字节码文件中所有函数、变量、类名组成的列表。
-		* sys.path :返回当前环境的PYTHONPATH组成的列表
-		* imp.reload() :重新加载模块
+这样在test.py文件中
+```
+from module import *
+f1() #正确执行
+f2() #不能执行
+```
+
+模块补充函数：
+
+* dir() :返回编译完成字节码文件中所有函数、变量、类名组成的列表。
+* sys.path :返回当前环境的PYTHONPATH组成的列表
+* imp.reload() :重新加载模块
 
 ### 包
 
