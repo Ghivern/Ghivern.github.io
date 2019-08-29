@@ -1,7 +1,7 @@
 ---
 title: Linux文件操作 --- 系统调用
 layout: post
-tags: [Linux System Program]
+tags: [Linux系统编程]
 ---
 
 1.1 open system call
