@@ -1,7 +1,7 @@
 ---
 title: C++引用
 layout: post
-tags: [ C++ ]
+tags: [C++]
 ---
 
 
