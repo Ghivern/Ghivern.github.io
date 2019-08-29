@@ -46,5 +46,3 @@ a.birds.say()
 ```
 
 在animal所在文件夹下执行python.exe test.py(或者将animal包所在路径加入环境变量，即可在任何路径下引用此包)
-
-![测试结果](https://github.com/zhiwenji/zhiwenji.github.io/blob/master/_docs/python-learn-note/images/2019-8-29-create-my-package-image-testResult.png?raw=true "测试结果")
