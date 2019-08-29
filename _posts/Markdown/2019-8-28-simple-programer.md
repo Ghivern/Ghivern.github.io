@@ -12,15 +12,10 @@ tags: [Markdown]
 ### 一、标题
 
 # 一级标题
-
 ## 二级标题
-
 ### 三级标题
-
 #### 四级标题
-
 ##### 五级标题
-
 ###### 六级标题
 
 ```
@@ -78,7 +73,7 @@ tags: [Markdown]
 
 ### 五、图片
 
-![picture](https://github.com/zhiwenji/zhiwenji.github.io/blob/master/images/test.jpg?raw=true "A cool girl")
+![picture]("{{ site.baseurl }}/assets/images/Dust_Bunny.jpg" "A cool girl")
 
 ```
 ![图片名](url '图片title')
@@ -185,6 +180,14 @@ void echo(){
 	puts("这是一段很牛逼的代码");
 }
 echo();
+```
+
+```
+单行代码用  `content`  实现
+多行代码用 ```
+          content1
+          content2
+          ```实现
 ```
 
 ## 十、流程图
