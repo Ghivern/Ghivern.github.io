@@ -1,7 +1,7 @@
 ---
 title: QPainter--基本绘图一
 layout: post
-tags: [ Qt ]
+tags: [Qt]
 ---
 
 ## 概述

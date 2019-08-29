@@ -1,7 +1,7 @@
 ---
 title: 创建自己的python包
 layout: post
-tags: [ python ]
+tags: [python]
 ---
 
 >今天学会了如何实现一个基本的python包，还有许多地方不是很理解，后面学习后会拓展

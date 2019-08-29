@@ -1,7 +1,7 @@
 ---
 title: QPainter2--基本绘图二
 layout: post
-tags: [ Qt ]
+tags: [Qt]
 ---
 
 

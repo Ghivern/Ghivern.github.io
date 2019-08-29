@@ -1,7 +1,7 @@
 ---
 title: markdown学习笔记(基本语法)
 layout: post
-tags: [ markdown ]
+tags: [Markdown]
 ---
 
 参考文章：
