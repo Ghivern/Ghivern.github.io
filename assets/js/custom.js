@@ -36,5 +36,8 @@ function searchHandler() {
     var searchInput = document.getElementById('search-text');
     var text = searchInput.value;
     // add site:example.com in the placeholder
-    window.location.href = "https://www.google.com/search?q=site:nagekar.com " + text;
+    // window.location.href = "https://www.ghivern.xyz"+test;
+    window.location.href = "https://www.baidu.com/search?q=site:www.nagekar.com +" + text;
 }
+
+http://www.baidu.com/s?si=www.ghivern.xyz&cl=3&ct=2097152&tn=baidulocal&word=C++
