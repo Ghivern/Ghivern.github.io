@@ -118,13 +118,14 @@ from . import module2
 
 3. 在只和模块在一个包中时
 	- (1)其应包含import模块的语句,引入模块；为了更方便，比如requests库，我们`import requests`后，不用通过requests.api.get()使用get方法，只需要requests.get()即可，查看requests包源码可发现，其在__init__.py文件中有语句`from .api import get`,这样get这个名称就可以在包的名称空间中使用；而且此时api.py文件会被执行，也就是说api.py模块会被导入，导入的不仅仅是get方法。
-	- (2)用上述方法时，不用添加__all__列表,因为`import package`时,package的__init__.py文件会被执行，像上述一样,其模块会被引入
-	- (3)若不使用上述引入语句，而是将包中的模块加入__all__列表,则通过`from package import *`时没有问题，但是通过`import package`引入包时，模块是不会被执行的
-	- (4)综上，使用(1)所叙述是合理的
+	- (2)若不使用上述引入语句，而是将包中的模块加入__all__列表,则通过`from package import *`时没有问题，但是通过`import package`引入包时，模块是不会被执行的
+	- (3)其实__init__.py文件中也可以写执行代码，我看了一些第三方包，他们的有些方法就实现在这个文件中。
+	- (4)综上，使用(1)所叙述是合理的，而且有些方法可以直接写在__init__.py文件中。
 
 4. 一个包中既有子包又有模块时
-	- (1)
-	- (2)
-	- (3)
-	- (4)
+	- (1)对于模块和上述3一样
+	- (2)对于子包
+		+ 在package的__init__.py文件中通过`from .subPackage import func`可执行子包的__init__.py文件,并将func方法名放入package名称空间;也可通过`from . import subPackage`引入子包,并执行子包的__init__.py,此时将子包名放入Package的名称空间
+
+5. \_\_all__列表,我的理解是当使用`from package import *`时导入,将列表中的内容加入package的名称空间,甚至子包模块的内容也可以加入此列表
 
