@@ -4,10 +4,10 @@ layout: post
 tags: [Markdown]
 ---
 
+介绍Markdown的基本语法结构，如标题、字体、代码、列表等,也便于以后自己查询
+
 参考文章：
 [这篇文章(简书)](https://www.jianshu.com/p/191d1e21f7ed)
-
-介绍Markdown的基本语法结构，如标题、字体、代码、列表等,也便于以后自己查询
 
 ### 一、标题
 
