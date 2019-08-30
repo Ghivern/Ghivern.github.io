@@ -37,28 +37,21 @@ from module import func_module
 
 当模块被导入时，模块代码会被执行且仅仅一次。
 
-***模块内置属性:***
+*模块内置属性:*
 
 1. \_\_name\_\_ :模块直接执行时，其值为__main__;被其他py文件import时，模块被执行一次，__main_—值为模块名。可用这个属性和分离出模块的测试代码
-
 ```
 if __name__ == '__main__':
 	测试代码
 ```
-
 2. \_\_all\_\_:用于限定使用from module import * 语句引入的代码
-
 ```
-# module.py
 __all__ = ['f1']
-
 def f1():
 	return 0
-
 def f2():
 	return 1
 ```
-
 这样在test.py文件中
 ```
 from module import *
@@ -66,11 +59,11 @@ f1() #正确执行
 f2() #不能执行
 ```
 
-***模块补充函数:***
+*模块补充函数:*
 
-* dir() :返回编译完成字节码文件中所有函数、变量、类名组成的列表。
-* sys.path :返回当前环境的PYTHONPATH组成的列表
-* imp.reload() :重新加载模块
++ dir() :返回编译完成字节码文件中所有函数、变量、类名组成的列表。
++ sys.path :返回当前环境的PYTHONPATH组成的列表
++ imp.reload() :重新加载模块
 
 --------------------------------------
 
@@ -92,7 +85,6 @@ f2() #不能执行
 	- module4
 
 1. 若要`import package1`,则需要在package1的__init__.py文件中加入以下代码
-
 ```
 from . import module1
 from . import module2
@@ -105,16 +97,34 @@ from . import module2
 4. 若package1的module1模块需要导入package2的module3，则正常情况下，解释器将找不到module3，需要在package1的__init__.py文件中加入语句`sys.path.append("../")`,用于将package1父目录加入解释器的搜索目录
 
 5. 对于嵌套的包结构，如下：
-
 	- package
 		- subpackage
 			- __init__.py
 			- module1
 			- module2
 	- __init__.py
-
-若`from package.subpackage import module1`，则两个__init__.py文件均会被执行
+	- 若`from package.subpackage import module1`，则两个__init__.py文件均会被执行
 
 
 ---------------------------------------
+
+## 一些说明
+
+包结构中比较复杂的是包的__init__.py文件，我对这个文件功能的理解如下：
+
+1. 标识一个包
+
+2. 当import某个包时，首先执行__init__.py文件，通过这个文件导入包中的模块或子包
+
+3. 在只和模块在一个包中时
+	- (1)其应包含import模块的语句,引入模块；为了更方便，比如requests库，我们`import requests`后，不用通过requests.api.get()使用get方法，只需要requests.get()即可，查看requests包源码可发现，其在__init__.py文件中有语句`from .api import get`,这样get这个名称就可以在包的名称空间中使用；而且此时api.py文件会被执行，也就是说api.py模块会被导入，导入的不仅仅是get方法。
+	- (2)用上述方法时，不用添加__all__列表,因为`import package`时,package的__init__.py文件会被执行，像上述一样,其模块会被引入
+	- (3)若不使用上述引入语句，而是将包中的模块加入__all__列表,则通过`from package import *`时没有问题，但是通过`import package`引入包时，模块是不会被执行的
+	- (4)综上，使用(1)所叙述是合理的
+
+4. 一个包中既有子包又有模块时
+	- (1)
+	- (2)
+	- (3)
+	- (4)
 
