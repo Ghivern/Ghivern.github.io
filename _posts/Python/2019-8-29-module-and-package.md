@@ -8,12 +8,12 @@ tags: [Python]
 
 -------------------------------
 
-## 引入包和模块
+# 引入包和模块
 
 两种语句：
 
-* import xxx ：导入包或模块
-* from xxx import yyy ( as y ) ：从包中引入其模块或子包/从模块中导入子模块
+1. import xxx ：导入包或模块
+2. from xxx import yyy ( as y ) ：从包中引入其模块或子包/从模块中导入子模块
 
 ```
 ####示例
@@ -27,7 +27,7 @@ from module import func_module
 
 ------------------------------
 
-## 模块
+# 模块
 
 一个py文件即为一个模块，文件名即为模块名，将相关代码放入一个模块中有助于组织程序。
 
@@ -37,16 +37,16 @@ from module import func_module
 
 当模块被导入时，模块代码会被执行且仅仅一次。
 
-模块内置属性：
+*模块内置属性*：
 
-* __name__ :模块直接执行时，其值为__main__;被其他py文件import时，模块被执行一次，__main_—值为模块名。可用这个属性和分离出模块的测试代码
+1. __name__ :模块直接执行时，其值为__main__;被其他py文件import时，模块被执行一次，__main_—值为模块名。可用这个属性和分离出模块的测试代码
 
 ```
 if __name__ == '__main__':
 	测试代码
 ```
 
-* __all__:用于限定使用from module import * 语句引入的代码
+2. __all__:用于限定使用from module import * 语句引入的代码
 
 ```
 # module.py
@@ -66,7 +66,7 @@ f1() #正确执行
 f2() #不能执行
 ```
 
-模块补充函数：
+*模块补充函数*：
 
 * dir() :返回编译完成字节码文件中所有函数、变量、类名组成的列表。
 * sys.path :返回当前环境的PYTHONPATH组成的列表
@@ -74,7 +74,7 @@ f2() #不能执行
 
 --------------------------------------
 
-## 包
+# 包
 
 一个包含有__init__.py文件夹的文件夹即可认为是一个包，包内可以包含模块和子包。
 
@@ -91,20 +91,20 @@ f2() #不能执行
 	- module3
 	- module4
 
-* 若要`import package1`,则需要在package1的__init__.py文件中加入以下代码
+1. 若要`import package1`,则需要在package1的__init__.py文件中加入以下代码
 
 ```
 from . import module1
 from . import module2
 ```
 
-* 若要`import package1.module1`或者`from package import module1`,则不会执行package1的__init__.py文件，但是会执行module1一次
+2. 若要`import package1.module1`或者`from package import module1`,则不会执行package1的__init__.py文件，但是会执行module1一次
 
-* 若要`form package1 import *`,则会执行__init__.py文件，需要手动指定__all__变量指明包含的模块`__all__ = ['module1','module2']`
+3. 若要`form package1 import *`,则会执行__init__.py文件，需要手动指定__all__变量指明包含的模块`__all__ = ['module1','module2']`
 
-* 若package1的module1模块需要导入package2的module3，则正常情况下，解释器将找不到module3，需要在package1的__init__.py文件中加入语句`sys.path.append("../")`,用于将package1父目录加入解释器的搜索目录
+4. 若package1的module1模块需要导入package2的module3，则正常情况下，解释器将找不到module3，需要在package1的__init__.py文件中加入语句`sys.path.append("../")`,用于将package1父目录加入解释器的搜索目录
 
-* 对于嵌套的包结构，如下：
+5. 对于嵌套的包结构，如下：
 
 	- package
 		- subpackage
