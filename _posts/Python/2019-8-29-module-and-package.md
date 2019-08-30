@@ -84,19 +84,18 @@ f2() #不能执行
 	- module3
 	- module4
 
-1. 若要`import package1`,则需要在package1的__init__.py文件中加入以下代码
+1. 若要`import package1`,则可要在package1的__init__.py文件中加入以下代码,否则包内模块不会被执行
 ```
 from . import module1
 from . import module2
 ```
+此时package1在环境的名称空间内,module1和module2在package1的名称空间内
 
-2. 若要`import package1.module1`或者`from package import module1`,则不会执行package1的__init__.py文件，但是会执行module1一次
+2. 若要`form package1 import *`,则会执行__init__.py文件，需要手动指定__all__变量指明包含的模块`__all__ = ['module1','module2']`,此时列表中内容在环境的名称空间内
 
-3. 若要`form package1 import *`,则会执行__init__.py文件，需要手动指定__all__变量指明包含的模块`__all__ = ['module1','module2']`
+3. 若package1的module1模块需要导入package2的module3，则正常情况下，解释器将找不到module3，需要在package1的__init__.py文件中加入语句`sys.path.append("../")`,用于将package1父目录加入解释器的搜索目录
 
-4. 若package1的module1模块需要导入package2的module3，则正常情况下，解释器将找不到module3，需要在package1的__init__.py文件中加入语句`sys.path.append("../")`,用于将package1父目录加入解释器的搜索目录
-
-5. 对于嵌套的包结构，如下：
+4. 对于嵌套的包结构，如下：
 	- package
 		- subpackage
 			- \_\_init\_\_.py
@@ -125,7 +124,7 @@ from . import module2
 4. 一个包中既有子包又有模块时
 	- (1)对于模块和上述3一样
 	- (2)对于子包
-		+ 在package的__init__.py文件中通过`from .subPackage import func`可执行子包的__init__.py文件,并将func方法名放入package名称空间;也可通过`from . import subPackage`引入子包,并执行子包的__init__.py,此时将子包名放入Package的名称空间
+		+ 在package的__init__.py文件中执行`from .subPackage import func`语句后会执行子包的__init__.py文件,并将func方法名放入package名称空间;也可通过`from . import subPackage`语句引入子包,并会执行子包的__init__.py,此时将子包名放入Package的名称空间
 
 5. \_\_all__列表,我的理解是当使用`from package import *`时导入,将列表中的内容加入package的名称空间,甚至子包模块的内容也可以加入此列表
 
