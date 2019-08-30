@@ -31,6 +31,8 @@ author :
 
 # production_url : https://www.nagekar.com
 
+production_url : https://www.ghivern.xyz
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
