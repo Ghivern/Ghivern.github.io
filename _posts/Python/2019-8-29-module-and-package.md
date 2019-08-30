@@ -76,11 +76,11 @@ f2() #不能执行
 有如下包结构
 
 - package1
-	- __init__.py
+	- \_\_init\_\_.py
 	- module1.py
 	- module2.py
 - package2
-	- __init__.py
+	- \_\_init\_\_.py
 	- module3
 	- module4
 
@@ -99,10 +99,10 @@ from . import module2
 5. 对于嵌套的包结构，如下：
 	- package
 		- subpackage
-			- __init__.py
+			- \_\_init\_\_.py
 			- module1
 			- module2
-	- __init__.py
+	- \_\_init\_\_.py
 	- 若`from package.subpackage import module1`，则两个__init__.py文件均会被执行
 
 
