@@ -73,7 +73,7 @@ tags: [Markdown]
 
 ### 五、图片
 
-![picture](https://github.com/Ghivern/Ghivern.github.io/blob/master/_posts/Markdown/image/flower.jpg?raw=true "flower")
+![picture](/assets/images/flower.jpg "flower")
 
 ```
 ![图片名](url '图片title')
