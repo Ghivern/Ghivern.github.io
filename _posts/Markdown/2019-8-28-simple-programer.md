@@ -83,7 +83,7 @@ tags: [Markdown]
 
 [百度](http://www.baidu.com)
 
-[我的博客](http://zhiwenji.github.io 'Welcome to my Blog')
+[我的博客](http://ghivern.github.io 'Welcome to my Blog')
 
 ```
 [超链接名](url '超链接title')
