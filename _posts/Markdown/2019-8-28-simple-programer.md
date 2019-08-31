@@ -73,7 +73,7 @@ tags: [Markdown]
 
 ### 五、图片
 
-![picture](/assets/images/flower.jpg "flower")
+![picture](/_posts/Markdown/image/flower.jpg "flower")
 
 ```
 ![图片名](url '图片title')
