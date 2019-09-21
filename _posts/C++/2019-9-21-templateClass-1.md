@@ -117,13 +117,13 @@ class Test{...};
 
 2. 显式实例化：即使不创建对象，编译器也将根据通用类模板生成类声明
 	
-* a.格式 
+	* a.格式 
 
 ```
-template class ClassName<string,100>;
+	template class ClassName<string,100>;
 ```
 
-* b. 显示实例化的声明必须放在模板定义所在名称空间(后面两种具体化也是如此)
+	* b. 显示实例化的声明必须放在模板定义所在名称空间(后面两种具体化也是如此)
 
 3. 显式具体化:对特定类型的定义，对模板进行修改，使其行为不同
 
@@ -151,7 +151,6 @@ template <typename T1> class Test<T1,int>{
 * a. 为指针提供具体化模板;若没有进行部分具体化，T将转换为char * 类型
 
 ```
-
 template<typename T>
 class Feed{
 	...
@@ -165,6 +164,7 @@ class Feed{
 Feed<char> fb1;
 Feed<char *> fb2;
 ```
+
 
 * b. 若有多个模板可供使用，编译器将使用具体化程度高的模板
 
