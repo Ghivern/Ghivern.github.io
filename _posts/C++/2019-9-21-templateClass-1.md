@@ -133,11 +133,9 @@ class Classname<specialized-type-name>{
 	...
 };
 ```
-</br>
-</br>
-</br>
-</br>
+	
 
+	
 4.部分具体化：可以给一部分类型参数指定具体类型；template后面的<>中声明没有被具体化的类型参数
 
 ```
