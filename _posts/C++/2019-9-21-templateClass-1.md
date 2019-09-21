@@ -122,12 +122,14 @@ class Test{...};
 
 3. 显式具体化:对特定类型的定义，对模板进行修改，使其行为不同 
 
-	* a. `template <> 
-	      class Classname<specialized-type-name>{
-	      	...
-	      };`
+ ```
+template <>
+class Classname<specialized-type-name>{
+	...
+};
+```
 
-4. 部分具体化：
+4. 部分具体化：可以给一部分类型参数指定具体类型；template后面的<>中声明没有被具体化的类型参数
 
 ```
 template <typename T1,typename T2>
@@ -141,11 +143,8 @@ template <typename T1> class Test<T1,int>{
 };
 ```
 
-	* a. 若有多个，模板可供使用，编译器将使用具体化程度高的模板
-
-	* b. 为指针提供具体化模板
-
 ```
+//为指针提供具体化模板
 template<typename T>
 class Feed{
 	...
@@ -158,5 +157,25 @@ class Feed{
       
 Feed<char> fb1;
 Feed<char *> fb2;
+注：若没有进行部分具体化，T将转换为char * 类型
+```
+
+	* a. 若有多个模板可供使用，编译器将使用具体化程度高的模板
+
+	* b. 部分具体化一种用法
+
+```
+template <Typename T1,Typename T2>
+class Test{
+	...
+};
+
+template <Typename T1>
+class Test<T1,*T1>{
+	...
+};
+
+Test<int,int *> t;
+//将使用下面一个部分具体化模板生成类的定义
 ```
 
