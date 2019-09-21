@@ -1,5 +1,5 @@
 ---
-title: Markdown for github--- 基本语法
+title: Markdown for github
 layout: post
 tags: [Markdown]
 ---
@@ -7,28 +7,23 @@ tags: [Markdown]
 markdown for github pag
 
 
-一、标题
+## 一、标题
 
 
 ## 大标题
+
 ### 小标题
+
 #### 超小标题
+
 超大标题
 ===
+
 标题
 ---
 
-```
-# 一级标题
-## 二级标题
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
 
-```
-
-### 二、字体
+## 二、字体
 
 *斜体*
 **加粗**
@@ -41,4 +36,10 @@ markdown for github pag
 ***斜体+加粗***
 ~~删除线~~
 ```
+
+## 简单超链接
+
+<http://www.ghivern.xyz>
+
+<zhiwenji@qq.com>
 
