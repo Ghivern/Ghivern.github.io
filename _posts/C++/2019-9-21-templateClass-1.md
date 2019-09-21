@@ -145,18 +145,18 @@ template <typename T1> class Test<T1,int>{
 
 	* b. 为指针提供具体化模板
 
-	```
-	template<typename T>
-	class Feed{
-		...
-	};
+```
+template<typename T>
+class Feed{
+	...
+};
               
-	template<typename T*>
-	class Feed{
-              
-	};
+template<typename T*>
+class Feed{
+	...             
+};
       
-    Feed<char> fb1;
-    Feed<char *> fb2;
-	```
+Feed<char> fb1;
+Feed<char *> fb2;
+```
 
