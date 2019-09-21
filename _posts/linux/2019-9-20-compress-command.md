@@ -27,7 +27,7 @@ layout: post
 	* -t :显示归档文件中的文件列表   tar -tf archieve.tgz
 	* -u :更新归档文件中的内容(压缩文档不可执行此操作)  tar -u test.c -f archieve.tar
 	* -d :比较归档文件和指定文件系统中文件的不同  tar -df test.tgz ./
-	* --delete :从归档文件中删除某(些)项,只能从后往前删除，同名项目将全部被删除(压缩文档不能执行此操作)  tar -f archieve.tar --delete test.c
+	* --delete :无短参数，从归档文件中删除某(些)项,只能从后往前删除，同名项目将全部被删除(压缩文档不能执行此操作)  tar -f archieve.tar --delete test.c
 
 3. tar -czvf test.tgz ./*.txt  
 
