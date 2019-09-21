@@ -122,7 +122,7 @@ class Test{...};
 
 3. 显式具体化:对特定类型的定义，对模板进行修改，使其行为不同 
 
- ```
+```
 template <>
 class Classname<specialized-type-name>{
 	...
