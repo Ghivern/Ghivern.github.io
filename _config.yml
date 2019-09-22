@@ -102,7 +102,7 @@ copyright: true
 # Canonical, set a canonical link tag in your jekyll, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remember set up your URL in _config.yml ( ex. url: http://yourdomain.com )
-canonical: true
+canonical: false
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
 seo: false
@@ -119,7 +119,7 @@ index_with_subtitle: false
 menu:
   home: /
   #categories: /categories/
-  archives: /archives/
+  #archives: /archives/
   tags: /tags/
   about: /about/
   #sitemap: /sitemap.xml
@@ -173,32 +173,32 @@ font:
   # Global font settings used on <body> element.
   global:
     # external: true will load this font family from host.
-    external: true
+    external: false
     family: Lato
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
   headings:
-    external: true
+    external: false
     family:
 
   # Font settings for posts
   # Fallback to `global` font settings.
   posts:
-    external: true
+    external: false
     family:
 
   # Font settings for Logo
   # Fallback to `global` font settings.
   # The `size` option use `px` as unit
   logo:
-    external: true
+    external: false
     family:
     size:
 
   # Font settings for <code> and code blocks.
   codes:
-    external: true
+    external: false
     family:
     size:
 
@@ -353,7 +353,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 
 # ---------------------------------------------------------------
