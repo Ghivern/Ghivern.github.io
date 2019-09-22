@@ -189,3 +189,34 @@ Test<int,int *> t;
 ```
 
 ----------------
+
+## 六、成员模板
+
+```c++
+using std::cout;
+using std::endl;
+template <typename T>
+class A{
+private:
+
+	template <typename V>
+	class B{
+	private:
+		V val;
+	public:
+		B(V v = 0):val(v) {}
+		V value() const {return val;}
+		void show() {cout<<val<<endl;}
+	};
+
+	B<T> q;
+	B<int> n;
+
+public:
+	A(T t,int i):q(t),n(i) {}
+	template <typename U>
+	U calcute(U u,T t) {return (q.value+n.value)*u/t;}
+
+};
+```
+
