@@ -192,6 +192,8 @@ Test<int,int *> t;
 
 ## 六、成员模板
 
+模板可以作为结构，类，或者模板类的成员
+
 ```c++
 using std::cout;
 using std::endl;
@@ -215,8 +217,96 @@ private:
 public:
 	A(T t,int i):q(t),n(i) {}
 	template <typename U>
-	U calcute(U u,T t) {return (q.value+n.value)*u/t;}
-
+	U calculate(U u,T t) {return (q.value+n.value)*u/t;}
+	void show() {q.show();n.show();}
 };
+//新的C++标准支持在类模板中什么，声明类模板和函数模板，而将实现外面实现他们(可参考C++ Primer Plus p585)
+
+int main(){
+	A<double> test(3.5,3);  //此时test.q的类型是B<double>
+	 						// test.n的类型是B<int>
+	cout<<test.calculate(3,3)<<endl; //此时U被设为int
+	test.calculate(3.5,3)<<endl; //此时U被设为double
+	return 0;
+} 
 ```
 
+## 七、将模板用作参数(模板参数)
+
+1.模板除了可以包含类型参数和非类型参数，还可以包含本身就是模板的参数
+
+2.`template <template <typename T> class Thing>`
+
+* a.其中`template <typename T> class`是类型，Thing是参数
+
+* b.如有class A{};使用的是使用的是上述模板参数,则有
+
+```c++
+template <template <typename T> class Thing>
+class A{
+	private:
+		Thing<int> a;
+		Thing<char> b;
+};
+
+template <typename V>
+class B{
+
+};
+
+
+A<B> test;  /*实例化test的私有数据成员a,b时，分别用B<int>和B<char>
+				替换Thind<int>和Thing<char>
+			*/
+
+```
+
+* c.可以混合使用模板参数的常规参数，如
+```c++
+template <template <typename T> class Thing,typename U,typename V>
+class A{
+private:
+	Thing<U> s1;
+	Thing<V> s2;
+	...
+};
+
+template <typename T>
+class B{
+	...
+};
+//此时A的声明形式
+// A<B,int,char> test;
+```
+
+## 模板别名(C++11)
+
+1.老的声明别名方式
+
+```c++
+typedef std::array<double,12> arrd;
+typedef std::array<int,12> arri;
+typedef std::array<std::string,12> arrs;
+arrd d;
+arri i;
+arrs s;
+```
+
+2.C++新增功能，可以使用模板提供一系列别名
+
+```c++
+template <typename T>
+	using arrtype = std::array<T,12>;
+arrtype<double> a;  //等价于array<double,12> a;
+arrtype<int> b;  //等价于array<int,12> b;
+				 //arrtype<T>表示std::array<T,12>
+```
+
+3.using=可用于非模板,这种语法于常规typedef等价
+
+```c++
+typedef const char * pc1;
+using pc2 = const char *;
+typedef const int *(*pa1)[10];
+using pa2 = const int *(*)[10];
+```
