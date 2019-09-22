@@ -5,15 +5,15 @@ tags: [C++]
 
 记录关于模板的基本概念和定义形式
 
-一、 模板的意义
+## 一、 模板的意义
 
 模板是c++代码重用的主要特点之一，通过非指定数据类型的类和方法实现；通过在使用模板时实例化之，由编译器生成对应类的声明。
 
 ---------------
 
-二、一般格式
+## 二、一般格式
 
-```
+```c++
 template <typename T>  //亦可用 template <class T>
 class Stack{
 	private:
@@ -39,7 +39,7 @@ void Stack<T>::setA(const T && ss){
 
 ---------------
 
-三、带有表达式参数的模板
+## 三、带有表达式参数的模板
 
 `template <typename T, int n>`
 
@@ -53,11 +53,11 @@ T称为类型参数,n称为表达式参数
 
 ---------------
 
-四、模板的多功能性
+## 四、模板的多功能性
 
 模板可以使用常规类的技术；模板类可以作为基类，组件类，还可以作为类型参数
 
-```
+```c++
 template <typename T>
 class Array(){
 	private:
@@ -78,7 +78,7 @@ Array< Stack<int> > a;  //模板类作为类型参数
 
 * a. 递归使用使用模板
 
-```
+```c++
 tempalte <typename T,int n>
 class Array{
 	private:
@@ -95,14 +95,14 @@ Array< Array<int,5>, 10> test; //这种情况下，其等价效果为int test[5]
 
 * b. 使用多个参数
 
-```
+```c++
 template <typename T1,typename T2>
 class Pair{...};
 ```
 
 * c. 默认类型参数
 
-```
+```c++
 template <typename T1,typename T2 = int>
 class Test{...};
 //不能为函数模板提供默认类型参数，然而可为非类型参数提供默认值
@@ -110,7 +110,7 @@ class Test{...};
 
 ---------------
 
-五、模板的具体化
+## 五、模板的具体化
 
 1.隐式实例化：创建对象时，指出参数类型，编译器根据通用模板生成具体类定义
 
@@ -128,7 +128,7 @@ class Test{...};
 
 3.显式具体化:对特定类型的定义，对模板进行修改，使其行为不同
 
-```
+```C++
 template <>
 class Classname<specialized-type-name>{
 	...
@@ -139,7 +139,7 @@ class Classname<specialized-type-name>{
 
 4.部分具体化：可以给一部分类型参数指定具体类型；template后面的<>中声明没有被具体化的类型参数
 
-```
+```C++
 template <typename T1,typename T2>
 class Test{
 	---
@@ -153,7 +153,7 @@ template <typename T1> class Test<T1,int>{
 
 * a. 为指针提供具体化模板;若没有进行部分具体化，T将转换为char * 类型
 
-```
+```C++
 template<typename T>
 class Feed{
 	...
@@ -173,7 +173,7 @@ Feed<char *> fb2;
 
 * c. 部分具体化一种用法
 
-```
+```C++
 template <Typename T1,Typename T2>
 class Test{
 	...

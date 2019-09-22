@@ -12,7 +12,7 @@ tags: [Python]
 **第二步**
 
 在animal文件夹下创建两个py文件，里面写自己的功能函数，下面两个示例，分别是dogs.py和birds.py
-```
+```python
 # birds.py
 
 def say():
