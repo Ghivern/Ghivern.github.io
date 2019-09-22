@@ -1,6 +1,7 @@
 ---
 title: Linux文件操作 --- lseek和fseek
-tags: [Linux-System-Program]
+layout: post
+tags: [Linux系统编程]
 ---
 
 1、系统调用lseek

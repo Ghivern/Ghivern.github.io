@@ -1,5 +1,6 @@
 ---
 title: Markdown --- 基本语法
+layout: post
 tags: [Markdown]
 ---
 

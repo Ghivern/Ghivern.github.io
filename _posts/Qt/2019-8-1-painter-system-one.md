@@ -1,5 +1,6 @@
 ---
 title: QPainter绘图系统 - 基本绘图一
+layout: post
 tags: [Qt]
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: 记录自己第一次面试笔试题
+layout: post
 tags: [Records]
 ---
 

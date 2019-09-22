@@ -1,6 +1,7 @@
 ---
 title: 压缩和解压文件
 tags: [Linux]
+layout: post
 ---
 
 记录Linux的压缩和解压命令和用法

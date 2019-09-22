@@ -1,5 +1,6 @@
 ---
 title: 构造函数
+layout: post
 tags: [C++]
 ---
 

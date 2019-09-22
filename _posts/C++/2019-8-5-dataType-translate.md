@@ -1,5 +1,6 @@
 ---
 title: C++ - 数据类型转换
+layout: post
 tags: [C++]
 ---
 
