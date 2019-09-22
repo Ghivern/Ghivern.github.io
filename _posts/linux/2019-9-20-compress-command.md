@@ -3,15 +3,15 @@ title: 压缩和解压文件
 tags: [Linux]
 ---
 
-记录Linux的压缩和解压命令和用法
+> 记录Linux的压缩和解压命令和用法
 
-一、gzip和gnuzip
+## 一、gzip和gnuzip
 
 1. gzip:压缩单个文件命令，压缩文件后缀gz
 	
 2. gunzip:解压缩由gzip压缩的文件
 
-二、tar
+## 二、tar
 
 1. tar是一个归档命令，可以将多个文件或文件夹归档到一个归档文件;并且可以通过参数决定压缩与否
 
@@ -34,6 +34,6 @@ tags: [Linux]
 
 5. 归档文件一般后缀为tar;若进行压缩，则tar.gz或tgz
 
-三、bzip2(暂时不用，日后补充）
+## 三、bzip2(暂时不用，日后补充）
 
-四、cpio
+## 四、cpio
