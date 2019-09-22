@@ -6,6 +6,8 @@ tags: [C++]
 
 记录关于C++数据类型转换的内容
 
+
+
 基本数据类型：
 整形：signed char,char,unsigned char
           short,unsigned short
