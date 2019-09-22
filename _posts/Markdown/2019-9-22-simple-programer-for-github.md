@@ -1,6 +1,5 @@
 ---
 title: Markdown for github
-layout: post
 tags: [Markdown]
 ---
 

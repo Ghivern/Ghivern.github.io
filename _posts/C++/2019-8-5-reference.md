@@ -1,6 +1,5 @@
 ---
 title: C++ ---  引用
-layout: post
 tags: [C++]
 ---
 
