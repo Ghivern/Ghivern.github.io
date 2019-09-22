@@ -118,7 +118,7 @@ class Test{...};
 	
 * a. 格式
 
-```
+```c++
 	template class ClassName<string,100>;
 ```
 
