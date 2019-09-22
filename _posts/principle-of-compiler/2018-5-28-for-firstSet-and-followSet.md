@@ -1,6 +1,5 @@
 ---
 title: 编译原理 - 求上下文无关文法的first集合和follow集合
-layout: post
 tags: [编译原理]
 ---
 

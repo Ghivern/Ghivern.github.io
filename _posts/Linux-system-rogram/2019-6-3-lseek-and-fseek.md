@@ -1,6 +1,5 @@
 ---
 title: Linux文件操作 --- lseek和fseek
-layout: post
 tags: [Linux系统编程]
 ---
 
