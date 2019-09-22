@@ -1,6 +1,6 @@
 ---
 title: Linux文件操作 --- 标准库函数
-tags: [Linux System Program]
+tags: [Linux-System-Program]
 ---
 
 1、standard I/O library function fopen
