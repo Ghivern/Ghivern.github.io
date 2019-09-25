@@ -262,6 +262,7 @@ A<B> test;  /*实例化test的私有数据成员a,b时，分别用B<int>和B<cha
 ```
 
 * c.可以混合使用模板参数的常规参数，如
+
 ```c++
 template <template <typename T> class Thing,typename U,typename V>
 class A{
@@ -279,7 +280,7 @@ class B{
 // A<B,int,char> test;
 ```
 
-## 模板别名(C++11)
+## 八、模板别名(C++11)
 
 1.老的声明别名方式
 
