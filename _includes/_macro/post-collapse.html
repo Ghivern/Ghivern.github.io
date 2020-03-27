@@ -5,11 +5,11 @@
       <{% if site.seo %}h3{% else %}h2{% endif %} class="post-title">
         {% if post.link %}{% comment %} Link posts {% endcomment %}
           <a class="post-title-link post-title-link-external" target="_blank" href="{{ post.link }}" itemprop="url">
-            {{ post.data | post.title | default: post.link }}
+            {{ post.title | default: post.link }}
             <i class="fa fa-external-link"></i>
           </a>
         {% else %}
-            <a class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url">
+            <a class="post-title-link" href="{{"   " | post.url | relative_url }}" itemprop="url">
               {% if post.type == 'picture' %}
                 {{ post.content }}
               {% else %}
