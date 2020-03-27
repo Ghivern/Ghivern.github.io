@@ -9,9 +9,9 @@ type: about
 
 联系邮箱 : ghivern@foxmail.com
 
-gitee    : [https://gitee.com/Ghivern](url)
+gitee    : [https://gitee.com/Ghivern](url https://gitee.com/Ghivern)
 
-github   : [https://github.com/Ghivern](url)
+github   : [https://github.com/Ghivern](url https://github.com/Ghivern)
 
 
 
