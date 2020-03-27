@@ -9,7 +9,7 @@
             <i class="fa fa-external-link"></i>
           </a>
         {% else %}
-            <a class="post-title-link" href="{{"   " | post.url | relative_url }}" itemprop="url">
+            <a class="post-title-link" href="{{ post.url | relative_url }}" itemprop="url">
               {% if post.type == 'picture' %}
                 {{ post.content }}
               {% else %}
