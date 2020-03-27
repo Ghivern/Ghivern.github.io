@@ -8,5 +8,7 @@ type: about
 考虑到国外网站访问速度问题，我将博客同时部署到了gitee([https://ghivern.gitee.io](url https://ghivern.gitee.io))和github([https://ghivern.github.io](url https://ghivern.github.io))上,两者同步.
 
 联系邮箱 : ghivern@foxmail.com
+gitee    : [https://gitee.com/Ghivern](url)
+github   : [https://github.com/Ghivern](url)
 
 
