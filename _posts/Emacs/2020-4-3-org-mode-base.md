@@ -23,40 +23,40 @@ tags: [ Emacs ]
 </div>
 </div>
 
-# code<a id="sec-1" name="sec-1"></a>
+# 1. code<a id="sec-1" name="sec-1"></a>
 
     int main(){
       printf("hello org mode\n");
       return 0;
     }
 
-# table<a id="sec-2" name="sec-2"></a>
+# 2. table<a id="sec-2" name="sec-2"></a>
 
-## C-c C-c<a id="sec-2-1" name="sec-2-1"></a>
+## 2.1. C-c C-c<a id="sec-2-1" name="sec-2-1"></a>
 
 -   表格对齐
 
-## C-c |<a id="sec-2-2" name="sec-2-2"></a>
+## 2.2. C-c |<a id="sec-2-2" name="sec-2-2"></a>
 
 -   生成表格
 
-## |- TAB<a id="sec-2-3" name="sec-2-3"></a>
+## 2.3. |- TAB<a id="sec-2-3" name="sec-2-3"></a>
 
 -   生成 |-&#x2014;+-&#x2014;|结构
 
-## | TAB<a id="sec-2-4" name="sec-2-4"></a>
+## 2.4. | TAB<a id="sec-2-4" name="sec-2-4"></a>
 
 -   生成 |     |结构
 
-## TAB<a id="sec-2-5" name="sec-2-5"></a>
+## 2.5. TAB<a id="sec-2-5" name="sec-2-5"></a>
 
 -   从前到后下一个表项
 
-## Shift + TAB<a id="sec-2-6" name="sec-2-6"></a>
+## 2.6. Shift + TAB<a id="sec-2-6" name="sec-2-6"></a>
 
 -   从后到前下一个表项
 
-## C-c space<a id="sec-2-7" name="sec-2-7"></a>
+## 2.7. C-c space<a id="sec-2-7" name="sec-2-7"></a>
 
 -   清除当前格
 
