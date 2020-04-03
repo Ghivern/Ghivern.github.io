@@ -1,0 +1,37 @@
+* code
+#+BEGIN_SRC c
+int main(){
+  printf("hello org mode\n");
+  return 0;
+}
+#+END_SRC
+
+* table
+** C-c C-c  
++ 表格对齐
+
+** C-c |  
++ 生成表格
+
+** |- TAB  
++ 生成 |----+----|结构
+
+** | TAB   
++ 生成 |     |结构
+
+** TAB 
++ 从前到后下一个表项
+
+** Shift + TAB 
++ 从后到前下一个表项
+
+** C-c space 
++ 清除当前格
+
+| name    | age | sex    |
+|---------+-----+--------|
+|         |  58 | female |
+| ghivern | 100 | male   |
+
+
+
