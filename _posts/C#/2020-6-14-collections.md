@@ -1,15 +1,13 @@
 ---
-title: 集合初识
+title: 初识.Net平台集合
 tags: [C#]
 ---
-
-> 集合基本概念
 
 Collections {#sec-1}
 ===========
 
-数组 {#sec-1-1}
-----
+一、数组 {#sec-1-1}
+--------
 
 -   C Sharp中的数组其实是集合类中的一种
 
@@ -17,8 +15,8 @@ Collections {#sec-1}
 
 -   System.Collections命名空间中的类ArrayList也实现了IEnumerable$\backslash$IList接口,实现方式比数组复杂,列表项目大小可变
 
-集合类概念 {#sec-1-2}
-----------
+二、集合类概念 {#sec-1-2}
+--------------
 
 ### 描述 {#sec-1-2-1}
 
@@ -42,7 +40,5 @@ Collections {#sec-1}
 
 -   IDictionary
     继承于IEnumerable和ICollection,类似于IList,但是提供了可以通过键值访问的项列表
-
--   System.Collections命名空间中还包含
 
 
