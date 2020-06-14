@@ -3,7 +3,7 @@ title: 初识.Net平台集合
 tags: [C#]
 ---
 
-> .Net平台集合概念
+> .Net平台集合的概念和使用
 
 Collections {#sec-1}
 ===========
@@ -39,7 +39,7 @@ Collections {#sec-1}
        static void Main(string[] args){
            Cow[] cowArray = new Cow[2]
            {
-               new Cow();
+           new Cow();
            new Cow();
            };
            ArrayList cowArrayList = new cowArrayList();
