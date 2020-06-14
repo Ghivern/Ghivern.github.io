@@ -1,8 +1,3 @@
----
-title: 初识.Net平台集合
-tags: [C#]
----
-
 Collections {#sec-1}
 ===========
 
@@ -11,9 +6,23 @@ Collections {#sec-1}
 
 -   C Sharp中的数组其实是集合类中的一种
 
--   实现了IEnumerable$\backslash$IList接口,但是不支持IList的高级功能,其表示大小固定的列表项
+-   实现了IEnumerable,ICollection和IList接口,但是不支持IList的高级功能,其表示大小固定的列表项
 
--   System.Collections命名空间中的类ArrayList也实现了IEnumerable$\backslash$IList接口,实现方式比数组复杂,列表项目大小可变
+-   System.Collections命名空间中的类ArrayList也实现了IEnumerable,ICollection和IList接口,实现方式比数组复杂,列表项目大小可变
+
+-   数组是强类型花的;ArrayList是弱类型化的
+
+\#+BEGING$_{\text{SRC}}$ c\# class Animal{ public void
+AnimalDoSomething() { ; } }
+
+class Cow{ public void CowDoSomething() { ; } }
+
+class Program{ static void Main(string\[\] args){ Cow\[\] cowArray = new
+Cow[^1] { new Cow(); new Cow(); }; ArrayList cowArrayList = new
+cowArrayList(); cowArrayList.AddRange(cowArray);
+
+cowArray[^2].CowDoSomething(); //正确 //cowArrayList.CowDoSomething();
+//错误 } } \#+END$_{\text{SRC}}$
 
 二、集合类概念 {#sec-1-2}
 --------------
@@ -41,4 +50,6 @@ Collections {#sec-1}
 -   IDictionary
     继承于IEnumerable和ICollection,类似于IList,但是提供了可以通过键值访问的项列表
 
+[^1]: DEFINITION NOT FOUND.
 
+[^2]: DEFINITION NOT FOUND.
