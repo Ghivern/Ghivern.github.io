@@ -3,7 +3,7 @@ title: 初识.Net平台集合
 tags: [C#]
 ---
 
-> 集合的基本概念
+> .Net平台集合概念
 
 Collections {#sec-1}
 ===========
@@ -19,17 +19,36 @@ Collections {#sec-1}
 
 -   数组是强类型花的;ArrayList是弱类型化的
 
-\#+BEGING$_{\text{SRC}}$ c\# class Animal{ public void
-AnimalDoSomething() { ; } }
+<!-- -->
 
-class Cow{ public void CowDoSomething() { ; } }
+    class Animal{
+       public void AnimalDoSomething()
+       {
+          ;
+       }
+    }
 
-class Program{ static void Main(string\[\] args){ Cow\[\] cowArray = new
-Cow[^1] { new Cow(); new Cow(); }; ArrayList cowArrayList = new
-cowArrayList(); cowArrayList.AddRange(cowArray);
+    class Cow{
+       public void CowDoSomething()
+       {
+          ;
+       }
+    }
 
-cowArray[^2].CowDoSomething(); //正确 //cowArrayList.CowDoSomething();
-//错误 } } \#+END$_{\text{SRC}}$
+    class Program{
+       static void Main(string[] args){
+           Cow[] cowArray = new Cow[2]
+           {
+               new Cow();
+           new Cow();
+           };
+           ArrayList cowArrayList = new cowArrayList();
+           cowArrayList.AddRange(cowArray);
+
+           cowArray[0].CowDoSomething();  //正确
+           //cowArrayList[0].CowDoSomething();  //错误
+       }
+    }
 
 二、集合类概念 {#sec-1-2}
 --------------
@@ -57,6 +76,4 @@ cowArray[^2].CowDoSomething(); //正确 //cowArrayList.CowDoSomething();
 -   IDictionary
     继承于IEnumerable和ICollection,类似于IList,但是提供了可以通过键值访问的项列表
 
-[^1]: DEFINITION NOT FOUND.
 
-[^2]: DEFINITION NOT FOUND.
